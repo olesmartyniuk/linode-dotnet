@@ -13,8 +13,13 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
     
-    public string Get()
+    public async Task<string> Get()
     {
+        _logger.LogInformation("Linode Test Service running at: {time}", DateTimeOffset.Now);
+        _logger.LogWarning("A warning from Linode Test Service at: {time}", DateTimeOffset.Now);
+        _logger.LogError("An error from Linode Test Service at: {time}", DateTimeOffset.Now);
+        await Task.Delay(1000);
+
         return "Web API works!";
     }
 }
