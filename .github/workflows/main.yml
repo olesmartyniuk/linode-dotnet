@@ -21,7 +21,7 @@ jobs:
     - name: Copy via ssh
       uses: garygrossgarten/github-action-scp@v0.5.3
       with:
-        local: /home/runner/work/linode-dotnet/deploy/
+        local: /home/runner/work/linode-dotnet/linode-dotnet/deploy/
         remote: /var/wwww/linode
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USER }}
