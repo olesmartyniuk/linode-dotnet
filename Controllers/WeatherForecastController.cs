@@ -20,6 +20,6 @@ public class WeatherForecastController : ControllerBase
         _logger.LogError("An error from Linode Test Service at: {time}", DateTimeOffset.Now);
         await Task.Delay(1000);
 
-        return "Web API works from GitHub Actions!";
+        return "Web API works from GitHub Actions 2!";
     }
 }
